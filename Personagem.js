@@ -1,26 +1,35 @@
 "use strict";
 //identificação
 class Personagem {
-    constructor() {
-        //atributos tipados
-        this.nome = '';
-        this.energia = 0;
-        this.vida = 0;
-        this.ataque = 0;
-        this.defesa = 0;
+    //atributos tipados
+    //nome: string = '';
+    //energia: number = 0;
+    //vida: number = 0;
+    //ataque: number = 0;
+    //defesa: number = 0;
+    constructor(
+    //continuam sendo atributos tipados
+    nome, energia, vida, ataque, defesa) {
+        this.nome = nome;
+        this.energia = energia;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defesa = defesa;
+        // define que os atributos DESTA classe deve ser iniciado com esses valores ou valores obrigatórios;
+        this.energia = 50;
+        this.ataque = 50;
+        this.nome = nome;
     }
 }
 //novo objeto estanciado da classe
-let sansa = new Personagem();
-sansa.nome = 'Sansa Stark';
+let sansa = new Personagem('Sansa Stark');
 sansa.ataque = 10;
 sansa.defesa = 20;
 sansa.energia = 50;
 sansa.vida = 100;
 console.log('Person: ', sansa);
 //novo objeto estanciado da classe
-let jon = new Personagem();
-jon.nome = 'Jon Snow';
+let jon = new Personagem('Json Snow');
 jon.ataque = 80;
 jon.defesa = 70;
 jon.energia = 90;
